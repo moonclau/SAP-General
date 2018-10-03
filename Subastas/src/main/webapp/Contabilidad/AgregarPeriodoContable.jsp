@@ -19,42 +19,43 @@
 </head>
 <body>    
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="Contabilidad.jsp" class="navbar-brand">Contabilidad</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a href="Contabilidad.jsp" class="navbar-brand text-white">Contabilidad</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conta_navbar" aria-controls="conta_navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="conta_navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="CalendarioContable.jsp" class="nav-link">Calendario&nbsp;Contable</a>
+                        <a href="CalendarioContable.jsp" class="nav-link text-white">Calendario&nbsp;Contable</a>
                     </li>                            
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="cuentas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuentas Contables</a>
-                        <div class="dropdown-menu" aria-labelledby="cuentas">
-                            <a class="nav-link" href="CuentasCliente.jsp">Cuentas&nbsp;Clientes</a>
-                            <a class="nav-link" href="CuentasProveedor.jsp">Cuentas&nbsp;Proveedores</a>
-                            <a class="nav-link" href="CuentasEmpresa.jsp">Cuentas&nbsp;Empresa</a>
-                            <a class="nav-link" href="CuentasSat.jsp">Cuentas&nbsp;SAT</a>                                    
+                        <a href="#" class="nav-link dropdown-toggle text-white" id="cuentas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuentas Contables</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="cuentas">
+                            <a class="nav-link text-white" href="CuentasCliente.jsp">Cuentas&nbsp;Clientes</a>
+                            <a class="nav-link text-white" href="CuentasProveedor.jsp">Cuentas&nbsp;Proveedores</a>
+                            <a class="nav-link text-white" href="CuentasEmpresa.jsp">Cuentas&nbsp;Empresa</a>
+                            <a class="nav-link text-white" href="CuentasSat.jsp">Cuentas&nbsp;SAT</a>                                    
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="AsientosContables.jsp" class="nav-link">Asientos&nbsp;Contables</a>
+                        <a href="AsientosContables.jsp" class="nav-link text-white">Asientos&nbsp;Contables</a>
                     </li> 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="libros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
-                        <div class="dropdown-menu" aria-labelledby="libros">
-                            <a class="nav-link" href="LibroDiario.jsp">Libro&nbsp;Diario</a>
-                            <a class="nav-link" href="LibroMayor.jsp">Libro&nbsp;Mayor</a>                                    
+                        <a href="#" class="nav-link dropdown-toggle text-white" id="libros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="libros">
+                            <a class="nav-link text-white" href="LibroDiario.jsp">Libro&nbsp;Diario</a>
+                            <a class="nav-link text-white" href="LibroMayor.jsp">Libro&nbsp;Mayor</a>                                    
                         </div>
                     </li>                            
                 </ul>   
                <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
-                    <button class="btn barra text-black my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
+                    <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
             </div>
         </nav>
-    </header>       
+    </header>
+    <br><br>
 <!--Contenedor principal de la pagina-->
 <div class="container-fluid">
     <!--HAciendo una fila para dividir el contenedor en columnas-->
@@ -64,10 +65,10 @@
         	<div class="panel panel-default">
               <div class="panel-body">
               <div class="container">
-              	<form action="" method="post">
+              	<form action="../BuscarClave" method="post">
                 <div class="row">                        
                     <div class="col-xs-2">
-                       	<input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar"/>
+                       	<input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar" required="required"/>
                     </div>
                	</div>
               	<div class="row">                        
@@ -105,13 +106,13 @@
                 <div class="container">
                     <h4 class="titulo">Agregar Periodo Contable</h4>
                     <div class="container">
-                        <form action="" method="post">                
+                        <form action="../AgregarPeriodoContable" method="post">                                            
                             <div class="row">                        
                                 <div class="col-xs-8">
                                     <label for="clavep">Ingresa clave de periodo:</label>
                                 </div>	
                                 <div class="col-xs-4">      
-                                    <input id="clavep" name="clavep" class="form-control" type="text"/>
+                                    <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
                                 </div>
                             </div>
                             <div class="row">                        
@@ -120,9 +121,9 @@
                                 </div>	
                                 <div class="col-xs-4">      
                                     <select id="ejercicio" name="ejercicio" class="form-control">
-                                        <option>2018</option>
-                                        <option>2017</option>
-                                        <option>2016</option>
+                                        <option value="x">Seleccione...</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
                                     </select>
                                 </div>
                             </div>         
@@ -131,7 +132,7 @@
                                     <label for="fechaini">Fecha de inicio:</label>
                                 </div>	
                                 <div class="col-xs-4">      
-                                    <input id="fechaini" name="fechaini" class="form-control" type="date"/>                                    
+                                    <input id="fechaini" name="fechaini" class="form-control" type="date" required="required"/>                                    
                                 </div>
                             </div>
                             <div class="row">                        
@@ -139,7 +140,7 @@
                                     <label for="fechafin">Fecha final:</label>
                                 </div>	
                                 <div class="col-xs-4">      
-                                    <input id="fechafin" name="fechafin" class="form-control" type="date"/>                                    
+                                    <input id="fechafin" name="fechafin" class="form-control" type="date" required="required"/>                                    
                                 </div>
                             </div>
                             <div class="row">                        
@@ -148,16 +149,17 @@
                                 </div>	
                                 <div class="col-xs-4">      
                                     <select id="estado" name="estado" class="form-control">
-                                        <option>Abierto</option>
-                                        <option>Bloqueado</option>
-                                        <option>Cerrado</option>
+                                        <option value="x">Seleccione...</option>
+                                        <option value="abierto">Abierto</option>
+                                        <option value="bloqueado">Bloqueado</option>
+                                        <option value="cerrado">Cerrado</option>
                                     </select>                                    
                                 </div>
                             </div>
                              <div class="row">       
                                 <br/>
                                 <div class="col-xs-6">
-                                    <input type="submit" value="Cancelar" class="btn-lg"/>
+                                    <input type="reset" value="Cancelar" class="btn-lg"/>
                                 </div>	
                                 <div class="col-xs-6">      
                                     <input type="submit" value="Agregar" class="btn-lg"/>

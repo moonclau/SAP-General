@@ -65,10 +65,10 @@
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div class="container">
-                        <form action="" method="post">
+                        <form action="../BuscarClave" method="post">
                             <div class="row">                        
                                 <div class="col-xs-2">
-                                    <input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar"/>
+                                    <input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar" required="required"/>
                                 </div>
                             </div>
                             <div class="row">                        
