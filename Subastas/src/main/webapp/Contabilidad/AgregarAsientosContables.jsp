@@ -19,42 +19,43 @@
 </head>
 <body>    
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="Contabilidad.jsp" class="navbar-brand">Contabilidad</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a href="Contabilidad.jsp" class="navbar-brand text-white">Contabilidad</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conta_navbar" aria-controls="conta_navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="conta_navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="CalendarioContable.jsp" class="nav-link">Calendario&nbsp;Contable</a>
+                        <a href="CalendarioContable.jsp" class="nav-link text-white">Calendario&nbsp;Contable</a>
                     </li>                            
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="cuentas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuentas Contables</a>
-                        <div class="dropdown-menu" aria-labelledby="cuentas">
-                            <a class="nav-link" href="CuentasCliente.jsp">Cuentas&nbsp;Clientes</a>
-                            <a class="nav-link" href="CuentasProveedor.jsp">Cuentas&nbsp;Proveedores</a>
-                            <a class="nav-link" href="CuentasEmpresa.jsp">Cuentas&nbsp;Empresa</a>
-                            <a class="nav-link" href="CuentasSat.jsp">Cuentas&nbsp;SAT</a>                                    
+                        <a href="#" class="nav-link dropdown-toggle text-white" id="cuentas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuentas Contables</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="cuentas">
+                            <a class="nav-link text-white" href="CuentasCliente.jsp">Cuentas&nbsp;Clientes</a>
+                            <a class="nav-link text-white" href="CuentasProveedor.jsp">Cuentas&nbsp;Proveedores</a>
+                            <a class="nav-link text-white" href="CuentasEmpresa.jsp">Cuentas&nbsp;Empresa</a>
+                            <a class="nav-link text-white" href="CuentasSat.jsp">Cuentas&nbsp;SAT</a>                                    
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="AsientosContables.jsp" class="nav-link">Asientos&nbsp;Contables</a>
+                        <a href="AsientosContables.jsp" class="nav-link text-white">Asientos&nbsp;Contables</a>
                     </li> 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="libros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
-                        <div class="dropdown-menu" aria-labelledby="libros">
-                            <a class="nav-link" href="LibroDiario.jsp">Libro&nbsp;Diario</a>
-                            <a class="nav-link" href="LibroMayor.jsp">Libro&nbsp;Mayor</a>                                    
+                        <a href="#" class="nav-link dropdown-toggle text-white" id="libros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Libros</a>
+                        <div class="dropdown-menu bg-primary" aria-labelledby="libros">
+                            <a class="nav-link text-white" href="LibroDiario.jsp">Libro&nbsp;Diario</a>
+                            <a class="nav-link text-white" href="LibroMayor.jsp">Libro&nbsp;Mayor</a>                                    
                         </div>
                     </li>                            
                 </ul>   
                <form class="form-inline my-2 my-lg-0" action="../index.jsp">                
-                    <button class="btn barra text-black my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
+                    <button class="btn-outline-primary barra text-white my-2 my-sm-0" id="cerrarSesion" type="submit">Cerrar Sesi&oacute;n</button>
                 </form>
             </div>
         </nav>
-    </header>           
+    </header>      
+    <br/><br/>
 <!--Contenedor principal de la pagina-->
 <div class="container-fluid">
     <!--HAciendo una fila para dividir el contenedor en columnas-->
@@ -99,70 +100,41 @@
                 <div class="container">
                     <h4 class="titulo">Agregar Asiento Contable</h4>
                     <br>
-                    <div class="container">
-                        <form action="" method="post">                
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="tipoa">Tipo de Asiento:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <select name="tipoa" id="tipoa" class="form-control">
-                                        <option>Asientos operativos</option>
-                                        <option>Asientos entradas</option>
-                                        <option>Asientos salidas</option>
-                                    </select>
-                                </div>
+                    <div class="container-fluid">
+                        <form role="form" method="post" action="../AgregarAsientoGeneral">
+                            <div class="form-group">
+                                <label for="claveAsiento">ingrese una clave para el asiento:</label>
+                                <input type="text" class="form-control" id="claveAsiento" name="claveAsiento" required="required">
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="numasiento">N&uacute;mero de asiento:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="numasiento" name="numasiento" type="text" class="form-control"/>
-                                </div>
-                            </div>         
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="monto">Monto de Verificaci&oacute;n:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="monto" name="monto" class="form-control" type="text"/>                                    
-                                </div>
+                            <div class="form-group">
+                                <label for="modulo">Selecciona modulo:</label>
+                                <select class="form-control" id="modulo" name="modulo">
+                                    <option value="x">Seleccione...</option>
+                                    <option value="compras">Compras</option>
+                                </select>
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="concepto">Concepto:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="concepto" name="concepto" class="form-control" type="text"/>                                    
-                                </div>
+                            <div class="form-group">
+                                <label for="periodo">Selecciona periodo:</label>
+                                <select class="form-control" id="periodo" name="periodo">
+                                    <option value="x">Seleccione...</option>
+                                    <option value="2018">2018</option>
+                                </select>
+                            </div>                            
+                            <div class="form-group">
+                                <label for="fecha">Selecciona la fecha:</label>
+                                <input type="date" id="fecha" name="fecha" class="form-control" required="required">  
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="fecha">Fecha:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="fecha" name="fecha" class="form-control" type="date"/>
-                                </div>
+                            <div class="form-group">
+                                <label for="concepto">ingrese concepto:</label>
+                                <input type="text" class="form-control" id="concepto" name="concepto" required="required">
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="movimiento">Tipo de Movimiento:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input name="movimiento" type="radio" value=""/>Cargo
-                                    <input name="movimiento" type="radio" value=""/>Abono
-                                </div>
+                            <div class="radiobutton">
+                                <label for="tipoCuenta">Elija tipo de cuenta:</label>
+                                <input type="radio" name="tipoCuenta" id="tipoCuenta" value="cliente">Cliente
+                                <input type="radio" name="tipoCuenta" id="tipoCuenta" value="proveedor">Proveedor
                             </div>
-                             <div class="row">       
-                                <br/>
-                                <div class="col-xs-6">
-                                    <input type="submit" value="Cancelar" class="btn-lg"/>
-                                </div>	
-                                <div class="col-xs-6">      
-                                    <input type="submit" value="Agregar" class="btn-lg"/>
-                                </div>
-                            </div>                                                  
+                            <button type="reset" class="btn btn-default">Cancelar</button>
+                            <button type="submit" class="btn btn-default">Agregar</button>
                         </form>
                     </div>
                 </div>

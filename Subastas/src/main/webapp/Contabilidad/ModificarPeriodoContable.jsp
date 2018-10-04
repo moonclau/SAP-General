@@ -106,75 +106,45 @@
                 <div class="container">
                     <h4 class="titulo">Modificar Periodo Contable</h4>
                     <div class="container">
-                        <form action="../ModificarPeriodo" method="post">                
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="clavep">Ingresa clave de periodo:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
-                                </div>
+                        <form role="form" action="../ModificarPeriodo" method="post">                
+                            <div class="form-group">
+                                <label for="clavep">Ingresa clave de periodo:</label>                            
+                                <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
                             </div>
-                            <div class="row"> 
-                                <div class="col-xs-8">                                    
-                                </div>	
-                                <div class="col-xs-4">
-                                    </br>
-                                    <input type="submit" value="buscar"/>
-                                </div>	                                
-                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="buscar" class="btn btn-default"/>
+                            </div>	                                                            
                         </form>                        
                         <br>
-                        <form action="../ActualizarPeriodo" method="post">                            
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="ejercicio">A&ntilde;o:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <select id="ejercicio" name="ejercicio" class="form-control">
-                                        <option value="x">Seleccione...</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2017">2017</option>                                        
-                                    </select>
-                                </div>
+                        <form role="form" action="../ActualizarPeriodo" method="post">                            
+                            <div class="form-group">
+                                <label for="ejercicio">A&ntilde;o:</label>                               
+                                <select id="ejercicio" name="ejercicio" class="form-control">
+                                    <option value="x">Seleccione...</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>                                        
+                                </select>                                
                             </div>         
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="fechaini">Fecha de inicio:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="fechaini" name="fechaini" class="form-control" type="date"/>                                    
-                                </div>
+                            <div class="form-group">
+                                <label for="fechaini">Fecha de inicio:</label>                                
+                                <input id="fechaini" name="fechaini" class="form-control" type="date"/>                                                                  
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="fechafin">Fecha final:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="fechafin" name="fechafin" class="form-control" type="date"/>                                    
-                                </div>
+                            <div class="form-group">
+                                <label for="fechafin">Fecha final:</label>                                
+                                <input id="fechafin" name="fechafin" class="form-control" type="date"/>                                                                    
                             </div>
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="estado">Estado:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <select id="estado" name="estado" class="form-control">
-                                        <option value="x">Seleccione...</option>
-                                        <option value="abierto">Abierto</option>
-                                        <option value="bloqueado">Bloqueado</option>
-                                        <option value="cerrado">Cerrado</option>
-                                    </select>                                    
-                                </div>
+                            <div class="form-group">
+                                <label for="estado">Estado:</label>                                
+                                <select id="estado" name="estado" class="form-control">
+                                    <option value="x">Seleccione...</option>
+                                    <option value="abierto">Abierto</option>
+                                    <option value="bloqueado">Bloqueado</option>
+                                    <option value="cerrado">Cerrado</option>
+                                </select>                                                                    
                             </div>
-                            <div class="row">       
-                                <br/>
-                                <div class="col-xs-6">
-                                    <input type="reset" value="Cancelar" class="btn-lg"/>
-                                </div>	
-                                <div class="col-xs-6">      
-                                    <input type="submit" value="Guardar" class="btn-lg"/>
-                                </div>
+                            <div class="form-group">
+                                <input type="reset" value="Cancelar" class="btn btn-default"/>                                
+                                <input type="submit" value="Guardar" class="btn btn-default"/>                                
                             </div>                            
                         </form>
                     </div>

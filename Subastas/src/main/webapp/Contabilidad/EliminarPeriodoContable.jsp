@@ -106,23 +106,14 @@
                 <div class="container">
                     <h4 class="titulo">Eliminar Periodo Contable</h4>
                     <div class="container">
-                        <form action="../EliminarPeriodo" method="post">                
-                            <div class="row">                        
-                                <div class="col-xs-8">
-                                    <label for="clavep">Ingresa clave de periodo:</label>
-                                </div>	
-                                <div class="col-xs-4">      
-                                    <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
-                                </div>
-                            </div>
-                             <div class="row">       
-                                <br/>
-                                <div class="col-xs-6">
-                                    <input type="reset" value="Cancelar" class="btn-lg"/>
-                                </div>	
-                                <div class="col-xs-6">      
-                                    <input type="submit" value="Eliminar" class="btn-lg"/>
-                                </div>
+                        <form role="form" action="../EliminarPeriodo" method="post">                                            
+                            <div class="form-group">
+                                <label for="clavep">Ingresa clave de periodo:</label>                            
+                                <input id="clavep" name="clavep" class="form-control" type="text" required="required"/>
+                            </div>                            
+                            <div class="form-group">
+                                <input type="reset" value="Cancelar" class="btn-lg"/>
+                                <input type="submit" value="Eliminar" class="btn-lg"/>                                
                             </div>                      
                         </form>
                     </div>
