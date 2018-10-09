@@ -1,6 +1,6 @@
 <%-- 
-    Document   : InventarioMerma
-    Created on : 6/10/2018, 05:36:57 PM
+    Document   : InventarioDevoluciones
+    Created on : 7/10/2018, 06:18:26 PM
     Author     : claudia
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inventario Merma</title>
+<title>Inventario Devoluciones</title>
 <!-- Bootstrap -->
 <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -64,94 +64,63 @@
     <div class="col-sm-3 ">
         <div class="card" text-center>
             <div class="card-body">
-                <label class="card-text">Buscar id de merma</label><br>
-                <input type="text" id="bmerma" name="bmerma" class="form-control form-control-sm" />
-                <input id="bomerma" type="submit" value="Buscar" class="btn btn-success"/><br><br>
-                <p class="card-text">Eliminar producto de merma</p>
-                <input type="text" id="emerma" name="emerma" class="form-control form-control-sm" />
-                <input id="boemerma" type="submit" value="Eliminar" class="btn btn-success"/><br><br>
-                <p class="card-text">Nuevo producto de merma</p>
-                <input id="boamerma" type="submit" value="Agregar" class="btn btn-success"/><br><br>
-                <p class="card-text">Modificar producto de merma</p>
-                <input id="bommerma" type="submit" value="Modificar" class="btn btn-success"/><br><br>
+                <label class="card-text">Buscar id de devolucion</label><br>
+                <input type="text" id="bid" name="bid" class="form-control form-control-sm" />
+                <input id="boid" type="submit" value="Buscar" class="btn btn-success"/><br><br>
+                <label class="card-text">Buscar id de producto</label><br>
+                <input type="text" id="bip" name="bip" class="form-control form-control-sm" />
+                <input id="boip" type="submit" value="Buscar" class="btn btn-success"/><br><br>
+                <label class="card-text">Buscar id de compra</label><br>
+                <input type="text" id="bic" name="bic" class="form-control form-control-sm" />
+                <input id="boic" type="submit" value="Buscar" class="btn btn-success"/><br><br>
+                <p class="card-text">Eliminar producto de devolucion</p>
+                <input type="text" id="epd" name="epd" class="form-control form-control-sm" />
+                <input id="bopd" type="submit" value="Eliminar" class="btn btn-success"/><br><br>
                 <p class="card-text">Reporte</p>
-                <input id="bogmerma" type="submit" value="Generar" class="btn btn-success"/>
+                <input id="bor" type="submit" value="Generar" class="btn btn-success"/>
+                <p class="card-text">Registro de producto rechazado</p>
+                <input id="borpe" type="submit" value="Agregar producto" class="btn btn-success"/>
             </div>
         </div>
     </div>
     <!--/.Panel-->
     <!--Panel-->
-    <div class="col-sm-9">
+   <div class="col-sm-9">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">Merma</h3>
+                <h3 class="card-title">Devoluciones</h3>
                 <!--TABLA MERMA NORMAL  -->
                 <div class="col-xs-12 col-md-12 central table-responsive">              
                         <table class="tablas table">
                             <tr>                                
-                                <th>ID merma</th>
+                                <th>ID Devolucion</th>
+                                <th>ID compra</th>
                                 <th>ID producto</th>
                                 <th>Nombre</th>
-                                <th>Tipo</th>
-                                <th>Proveedor</th>
-                                <th>Cantidad</th>
-                                <th>Unidad</th>
-                                <th>Costo Unitario</th>
-                                <th>Fecha</th>
-                                <th>Descripcion</th>
-                                <th>Tipo merma</th>
+                                <th>tipo</th>
+                                <th>Cantidad devuelta</th>
+                                <th>Fecha devolucion</th>
+                                <th>Motivo</th>
                             </tr>
                             <tr>                                
                                 <td>01</td>
                                 <td>01</td>
-                                <td>Blusa</td>
+                                <td>15</td>
                                 <td>Ropa</td>
                                 <td>Puma</td>                   
                                 <td>5</td>
-                                <td>pieza</td>
-                                <td>100</td>
                                 <td>04/10/2018</td>
-                                <td>Descostura en mangas por transporte</td>
-                                <td>Normal</td>
+                                <td>El usuario no le gusto la talla que encargo</td>
                             </tr>
-                            <tr>                                     
+                            <tr>
                                 <td>02</td>
-                                <td>40</td>
+                                <td>40</td>                   
+                                <td>1</td>
                                 <td>Martillo</td>
                                 <td>Herramienta</td>
-                                <td>Truper</td>                   
-                                <td>1</td>
-                                <td>pieza</td>
                                 <td>150</td>
                                 <td>04/10/2018</td>
-                                <td>desgarre en el mango</td>
-                                <td>Normal</td>
-                            </tr>
-                            <tr>                                    
-                                <td>01</td>
-                                <td>01</td>
-                                <td>Blusa</td>
-                                <td>Ropa</td>
-                                <td>Puma</td>                   
-                                <td>5</td>
-                                <td>pieza</td>
-                                <td>100</td>
-                                <td>04/10/2018</td>
-                                <td>Descostura en mangas por transporte</td>
-                                <td>Normal</td>
-                            </tr>
-                            <tr>                                     
-                                <td>01</td>
-                                <td>01</td>
-                                <td>Blusa</td>
-                                <td>Ropa</td>
-                                <td>Puma</td>                   
-                                <td>5</td>
-                                <td>pieza</td>
-                                <td>100</td>
-                                <td>04/10/2018</td>
-                                <td>Descostura en mangas por transporte</td>
-                                <td>Normal</td>
+                                <td>El martillo tenia roto el empaque</td>
                             </tr>
                         </table>               
             </div>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : InventarioMermaAgregar
-    Created on : 6/10/2018, 10:44:45 PM
+    Document   : InventarioMermaModificar
+    Created on : 7/10/2018, 05:59:08 PM
     Author     : claudia
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inventario Merma Agregar</title>
+       <title>Inventario Merma Modificar</title>
 <!-- Bootstrap -->
 <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -64,16 +64,26 @@
     <div class="col-sm-9 central" style="width: auto; margin: auto auto;" >
         <div class="card" text-center>
             <div class="card-body">
-                <h3 class="card-title" >Agregar Producto en Merma</h3><br><br>
+                <h3 class="card-title" >Modificar Producto en Merma</h3><br><br>
                 <!--INICIO CUESTIONARIO-->
-                <label class="card-text">Ingrese el id del producto:</label><br>
+                <label class="card-text">Ingrese el id de merma:</label><br>
+                <input type="text" id="mip" name="mim" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el id del producto:</p>
+                <input type="text" id="mipr" name="mpr" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese el Nombre del producto:</label><br>
+                <input type="text" id="mip" name="mnp" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el tipo o grupo del producto:</p>
+                <input type="text" id="mipr" name="mtp" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese el id del proveedor:</label><br>
                 <input type="text" id="mip" name="mip" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese el id del proveedor:</p>
-                <input type="text" id="mipr" name="impr" class="form-control form-control-sm" />
                 <label class="card-text">Ingrese la cantidad:</label><br>
                 <input type="text" id="mc" name="mc" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese la unidad:</p>
+                <input type="text" id="mipr" name="mu" class="form-control form-control-sm" />
                 <p class="card-text">Ingrese la fecha</p>
                 <input type="text" id="mf" name="mf" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el costo unitario:</p>
+                <input type="text" id="mipr" name="mcu" class="form-control form-control-sm" />
                 <p class="card-text">Ingrese la descripcion</p>
                 <input type="text" id="md" name="md" class="form-control form-control-sm" />
                 <p class="card-text">Ingrese tipo de merma</p>

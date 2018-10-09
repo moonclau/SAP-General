@@ -1,6 +1,6 @@
 <%-- 
-    Document   : InventarioMermaAgregar
-    Created on : 6/10/2018, 10:44:45 PM
+    Document   : InventarioDevAgregar
+    Created on : 7/10/2018, 06:52:48 PM
     Author     : claudia
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inventario Merma Agregar</title>
+             <title>Inventario Agregar Devolucion</title>
 <!-- Bootstrap -->
 <link href="../Recursos/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -64,20 +64,22 @@
     <div class="col-sm-9 central" style="width: auto; margin: auto auto;" >
         <div class="card" text-center>
             <div class="card-body">
-                <h3 class="card-title" >Agregar Producto en Merma</h3><br><br>
+                <h3 class="card-title" >Agregar Producto Rechazado</h3><br><br>
                 <!--INICIO CUESTIONARIO-->
-                <label class="card-text">Ingrese el id del producto:</label><br>
-                <input type="text" id="mip" name="mip" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese el id del proveedor:</p>
-                <input type="text" id="mipr" name="impr" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese el id de compra:</label><br>
+                <input type="text" id="dic" name="dic" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el id del producto:</p>
+                <input type="text" id="dipr" name="dpr" class="form-control form-control-sm" />
+                <label class="card-text">Ingrese el Nombre del producto:</label><br>
+                <input type="text" id="dip" name="dip" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el tipo o grupo del producto:</p>
+                <input type="text" id="dtpr" name="dtpr" class="form-control form-control-sm" />
                 <label class="card-text">Ingrese la cantidad:</label><br>
-                <input type="text" id="mc" name="mc" class="form-control form-control-sm" />
+                <input type="text" id="dc" name="dc" class="form-control form-control-sm" />
                 <p class="card-text">Ingrese la fecha</p>
-                <input type="text" id="mf" name="mf" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese la descripcion</p>
-                <input type="text" id="md" name="md" class="form-control form-control-sm" />
-                <p class="card-text">Ingrese tipo de merma</p>
-                <input type="text" id="mt" name="mt" class="form-control form-control-sm" /><br><br>
+                <input type="text" id="df" name="df" class="form-control form-control-sm" />
+                <p class="card-text">Ingrese el Motivo:</p>
+                <input type="text" id="dm" name="dm" class="form-control form-control-sm" />
                 <input id="boamerma" type="submit" value="Guardar" class="btn btn-success"/>
             </div>
         </div>
